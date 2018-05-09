@@ -4,6 +4,12 @@
 
 file = open('engmix.txt')
 
+
+numWords = 0
 for line in file:
-    print(line)
-    break
+    if 'shay' in line:
+        print(line.strip()) #strip gets rid of line break
+    numWords += 1
+    
+print(numWords)
+
