@@ -2,7 +2,8 @@
 #10May2018
 #reverseFile.py
 
-file = open('fileDemo.py')
+whichFile = input('Which File?' )
+file = open(whichFile)
 
 L=[]
 for line in file:
