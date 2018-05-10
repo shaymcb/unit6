@@ -4,9 +4,12 @@
 
 file = open('engmix.txt')
 
-L = [0]*22
+L = [0]*21
 for line in file:
     L[len(line.strip())-1] += 1
 
-print(L)
 
+num = 1
+for item in L:
+    print(num,'letter words:',item)
+    num += 1
