@@ -10,5 +10,5 @@ for line in file:
 
 L.reverse()
 for item in L:
-    print(L)
+    print(item)
     
