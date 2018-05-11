@@ -11,6 +11,7 @@ def palindrome(word):
     return palindrome
     
 for line in file:
-    if line.strip() == palindrome(line.strip()):
-        print(line.strip())
+    if len(line.strip())>1 and line.strip()[0] == line.strip()[-1]:
+        if line.strip() == palindrome(line.strip()):
+            print(line.strip())
     
