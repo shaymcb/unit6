@@ -10,5 +10,7 @@ def palindrome(word):
         palindrome += word[i]
     return palindrome
     
-print(palindrome('hello'))
+for line in file:
+    if line.strip() == palindrome(line.strip()):
+        print(line.strip())
     
