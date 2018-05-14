@@ -12,7 +12,7 @@ for line in file:
 if inDictionary == False:
     print(word,'is not in the dictionary')
 """
-
+"""
 dictionaryList = []
 
 for line in file:
@@ -20,3 +20,19 @@ for line in file:
 
 num = int(input('Enter a number: '))
 print(dictionaryList[num])
+"""
+"""
+for line in file:
+    print(line.strip()+'!')
+"""
+
+letter = input('Enter letter: ')
+
+most = 0
+for line in file:
+    if line.strip().count(letter) > most:
+        most = line.strip().count(letter)
+        word = line.strip()
+    
+print(word,'has',most,letter+"'s")
+    
