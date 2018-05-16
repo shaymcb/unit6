@@ -5,7 +5,7 @@
 file = open('engmix.txt')
 
 letters = 'abcdefghijklmnopqrstuvwxyz'
-shortList = ['averrryyyyylloooonngggwoorrrrrdddddoommg']*27
+shortList = ['thiswouldbeaverylongshortestword']*27
 longList = ['']*27
 
 for line in file:
@@ -15,14 +15,13 @@ for line in file:
         firstletter = line[0].lower()
     
     if firstletter in letters:
-        pos = letters.index(firstletter)  #first letter position
-        word = line
+        pos = letters.index(firstletter)  #first letter position in letter list
         
-        if len(shortList[pos]) > len(word):
-            shortList[pos] = word
+        if len(shortList[pos]) > len(line):
+            shortList[pos] = line
             
-        if len(longList[pos]) < len(word):
-            longList[pos] = word
+        if len(longList[pos]) < len(line):
+            longList[pos] = line
 
 for i in range(26):
     print(shortList[i],'/',longList[i])
