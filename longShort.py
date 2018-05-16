@@ -9,9 +9,14 @@ shortList = ['averrryyyyylloooonngggwoorrrrrdddddoommg']*27
 longList = ['']*27
 
 for line in file:
-    if len(line.strip()) > 0:
-        pos = letters.index(line.strip()[0])  #first letter position
-        word = line.strip()
+    line = line.strip()
+    
+    if len(line) > 0:
+        firstletter = line[0].lower()
+    
+    if firstletter in letters:
+        pos = letters.index(firstletter)  #first letter position
+        word = line
         
         if len(shortList[pos]) > len(word):
             shortList[pos] = word
@@ -19,4 +24,5 @@ for line in file:
         if len(longList[pos]) < len(word):
             longList[pos] = word
 
-print(longList[10])
+for i in range(26):
+    print(shortList[i],'/',longList[i])
