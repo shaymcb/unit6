@@ -5,8 +5,8 @@
 file = open('engmix.txt')
 
 letters = 'abcdefghijklmnopqrstuvwxyz'
-shortList = ['thiswouldbeaverylongshortestword']*27
-longList = ['']*27
+shortList = ['thiswouldbeaverylongshortestword']*26
+longList = ['']*26
 
 for line in file:
     line = line.strip()
